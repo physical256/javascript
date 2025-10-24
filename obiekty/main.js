@@ -93,18 +93,18 @@
 
 
 
-const uczen = {
+//const uczen = {
 
-    name: "Krystian",
-    klasa: "4tia",
-showText(){
-    return console.log(`nazywam się ${this.name}  i chodze do klasy  ${this.klasa}`)
-}
-}
-console.log(uczen.showtime())
+//    name: "Krystian",
+//  klasa: "4tia",
+//showText(){
+//    return console.log(`nazywam się ${this.name}  i chodze do klasy  ${this.klasa}`)
+//}
+//}
+//console.log(uczen.showtime())
 
-class SimpleClass {
-    #Pesel = 32423423361
-    #privatemethod(){}
-}
+//class SimpleClass {
+//    #Pesel = 32423423361
+//  #privatemethod(){}
+
 
