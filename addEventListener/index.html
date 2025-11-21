@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+<div id="test">To jest DIV
+    <p>kliknij aby zmienić obramowanie</p>
+    <button id="myButton">zmień obramowanie</button>
+</div>
+<p id = "demo"></p>
+
+</body>
+<script>
+    document.getElementById("myButton").addEventListener("click",border)
+    function border(){
+        document.querySelector("#test").style.border = "3px solid red"
+    }
+    </script>
+
+   
+</html>
