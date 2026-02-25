@@ -1,9 +1,0 @@
-animation-name:myAnimation
-animation-duration:4s
-
-@keyframes myAnimation {
-from{background-color:red}
-to{background-color:yellow}
-}
-
-

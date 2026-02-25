@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<p1>po najechaniu na button wyświetla napis over a po kliknięciu wyświetla napis click</p1>
+<button id="myButton">Testuj</button>
+<p id="Demo"></p>
+
+<script>
+    let button = document.querySelector('#myButton');
+    button.addEventListener('mouseover', mover);
+    button.addEventListener('click', mclick);
+
+    function mover() {
+        document.querySelector("#Demo").innerHTML += "over <br>";
+    }
+
+    function mclick() {
+        document.querySelector("#Demo").innerHTML += "click <br>";
+    }
+</script>
+
+
+</body>
+
+</html>

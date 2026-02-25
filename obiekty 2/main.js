@@ -1,36 +1,30 @@
 class Enemy {
- constructor(x,y) {
-  
-  this.x=x
-    this.y=y
-    this.type = "normalny"
-}
-fly() {
-  return this.type +"- lecę"
-}  
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.type = "normalny";
+  }
 
-}
-
-
-
-
-class Enemyshooter extends enemy {
-    constructor(x,y) {
-      super (x,y)
-       this (x,y)
-        this.type="strzelajacy"
-    }
-shoot(){
-   return this.type + "- strzelam"
+  fly() {
+    return this.type + " - lecę";
+  }
 }
 
+class EnemyShooter extends Enemy {
+  constructor(x, y) {
+    super(x, y);
+    this.type = "strzelający";
+  }
 
+  shoot() {
+    return this.type + " - strzelam";
+  }
 }
 
-const enemynormal = new enemy(10,20)
-console.log(enemynormal.fly())
-console.log(enemynormal.shoot())
+const enemyNormal = new Enemy(10, 20);
+console.log(enemyNormal.fly());
+// console.log(enemyNormal.shoot()); // To byłoby błędem
 
-const Enemyshooter = new Enemyshooter(20,30)
-console.log (Enemyshooter.fly())
-console.log(Enemyshooter.shoot())
+const enemyShooter = new EnemyShooter(20, 30);
+console.log(enemyShooter.fly());
+console.log(enemyShooter.shoot());

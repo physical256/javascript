@@ -4,8 +4,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="main.js"></script>
-    <p class="center">wyśrodkowany</p>
+ <h1>zminia kolor czerwnony na żółty</h1>
+ <style>
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: myAnimation;
+  animation-duration: 4s;
+}
+
+@keyframes myAnimation {
+  from { background-color: red; }
+  to   { background-color: yellow; }
+}
+</style>
+
+
+
 </body>
 
 </html>
