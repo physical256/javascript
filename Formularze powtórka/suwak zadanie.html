@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <from>
+        <label> ustaw kolor:<br>1
+            <input type="range" min="0" max="255" id="R">255
+            <input type="range" min="0" max="255" id="G">255
+            <input type="range" min="0" max="255" id="B">255
+
+ </label>
+
+</from> <br>
+<div>div</div>
+<script>
+   R.addEventListener("change", wybierz);
+   G.addEventListener("change", wybierz);
+    B.addEventListener("change", wybierz);
+    let div = document.querySelector("div");
+    function wybierz(){
+        div.style.background=`rgb(${R.value},${R.value},${G.value},${B.value})`
+    }
+</script>
+</body>
+</html>
