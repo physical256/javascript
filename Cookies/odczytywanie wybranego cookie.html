@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>odczytywanie wybranego cookie</p>
+    <script>
+function getCookie(name) {
+if(document.cookie !=="") {
+const cookies = document.cookie.split(/;*/);
+for(let cookie of cookies) {
+    const [cookieName,cookieVal] = cookie.split("=");
+    if(cookieName === decodeURIComponent(name)){
+    return decodeURIComponent(cookieVal);
+}
+}
+}
+return undefined;
+}
+console.log(getCookie("user"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> utworzenie cookie z jedniodniowym dniem ważności</p>
+    <script>
+        let date=new Date();
+        let tomorow=new Date (date.getTime()+24*60*60*1000);
+        date=tomorow.toUTCString();
+        Document.cookie="user=John;expires"+date;
+</script>
+</body>
+</html>

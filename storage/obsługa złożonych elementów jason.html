@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>storage - obsługa złożonych danych</p>
+    <script>
+        const user = {
+            name:"Karol",
+            surname:"Nowak",
+            age:20
+        };
+        localStorage.setItem("Mydata",JSON.stringify(user));
+        const retrievedObject = JSON.parse(localStorage.getItem("Mydata"))
+        console.log(retrievedObject);
+    </script>
+</body>
+</html>
