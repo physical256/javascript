@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Canvas - projekt</title>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="300"></canvas>
+
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+let x = 0;
+let angle = 0;
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // gradient nieba (createLinearGradient)
+  const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+  gradient.addColorStop(0, "skyblue");
+  gradient.addColorStop(1, "white");
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, 600, 200);
+
+  // droga
+  ctx.fillStyle = "gray";
+  ctx.fillRect(0, 200, 600, 100);
+
+  // linia przerywana (setLineDash + lineTo)
+  ctx.setLineDash([20, 15]);
+  ctx.beginPath();
+  ctx.moveTo(0, 250);
+  ctx.lineTo(600, 250);
+  ctx.strokeStyle = "white";
+  ctx.lineWidth = 3;
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // cień auta (shadow)
+  ctx.shadowColor = "black";
+  ctx.shadowBlur = 10;
+  ctx.shadowOffsetX = 5;
+  ctx.shadowOffsetY = 5;
+
+  // karoseria
+  ctx.fillStyle = "blue";
+  ctx.fillRect(x, 170, 120, 40);
+
+  // dach (quadraticCurveTo)
+  ctx.beginPath();
+  ctx.moveTo(x + 20, 170);
+  ctx.quadraticCurveTo(x + 60, 130, x + 100, 170);
+  ctx.fill();
+
+  // obramowanie (strokeRect)
+  ctx.strokeStyle = "black";
+  ctx.lineWidth = 2;
+  ctx.strokeRect(x, 170, 120, 40);
+
+  // szyby
+  ctx.fillStyle = "white";
+  ctx.fillRect(x + 30, 150, 25, 20);
+  ctx.fillRect(x + 65, 150, 25, 20);
+
+  // reset cienia
+  ctx.shadowBlur = 0;
+
+  // KOŁO 1 (translate + rotate + arc)
+  ctx.save();
+  ctx.translate(x + 30, 220);
+  ctx.rotate(angle);
+  ctx.beginPath();
+  ctx.arc(0, 0, 15, 0, Math.PI * 2);
+  ctx.fillStyle = "black";
+  ctx.fill();
+
+  // felga
+  ctx.strokeStyle = "white";
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  ctx.lineTo(15, 0);
+  ctx.stroke();
+  ctx.restore();
+
+  // KOŁO 2
+  ctx.save();
+  ctx.translate(x + 90, 220);
+  ctx.rotate(angle);
+  ctx.beginPath();
+  ctx.arc(0, 0, 15, 0, Math.PI * 2);
+  ctx.fillStyle = "black";
+  ctx.fill();
+
+  ctx.strokeStyle = "white";
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  ctx.lineTo(15, 0);
+  ctx.stroke();
+  ctx.restore();
+
+  // tekst (fillText + strokeText)
+  ctx.font = "20px Arial";
+  ctx.fillStyle = "black";
+  ctx.fillText("Mój samochód", 200, 30);
+
+  ctx.strokeStyle = "red";
+  ctx.strokeText("Canvas!", 200, 60);
+
+  // animacja
+  x += 2;
+  angle += 0.1;
+
+  if (x > 600) x = -120;
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

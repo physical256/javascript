@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <h1>Zmiana zawartości elementu funkcją html()</h1>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                alert($("#test").html("Nowa zawartość"));
+
+            });
+        });
+    </script>
+    <p id="test">this is some<b>bold</b>text in a paragraph</p>
+    <button> Show text </button>
+
+
+
+</body>
+</html>

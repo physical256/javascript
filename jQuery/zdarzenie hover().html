@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<body>
+    <script>
+        $(function($){
+            $("#p1").hover(function(){
+                alert("You entered p1");
+            },
+            function(){
+                alert("Bye! you naw leave p1!");
+            })
+        })
+    </script>
+    <p id ="p1">This is a paragraph</p>
+    <p id ="p2"> This is another paragraph</p>
+</body>
+</html>

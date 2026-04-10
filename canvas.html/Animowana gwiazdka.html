@@ -15,7 +15,7 @@ const ctx = canvas.getContext("2d")
 image.src = "gwiazdka.png"
 
 image.addEventListener("load", () => {
-    animateFps(draw, 10000)
+    animateFps(draw, 60)
 })
 
 function animateFps(callback, fps = 60) {

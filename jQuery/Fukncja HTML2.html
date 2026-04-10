@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <h1>Zmiana zawartości pola tekstowego funkcją val.</h1>
+      <script>
+        $(function(){
+            $("button").click(function(){
+                $("#name").val("Zorro");
+            });
+        });
+      </script>
+      <label>imie <input type ="text" id="name" value="Mickey Mouse"></label><br>
+      <button>Change content</button>
+</body>
+</html>
