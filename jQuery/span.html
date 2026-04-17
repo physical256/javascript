@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(function($){
+        $("span").parent().css({"color":"red",
+                  "border":"2px solid red" });
+    });
+</script>
+<style>
+    .ancestors * {
+        display:block;
+        border:2px solid lightgray;
+        color: lightgray;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+
+<div class="ancestors">
+    <div style="width:300px">div (grandparent)
+        <p>p (direct parent) </p>
+        <span>span</span>  
+    </div>
+</div>
+</body>
+</html>
