@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style type="text/css">
+    #main h2{
+        background:url(images/x.png) no-repeat 0% 10%;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+    #main h2.close{
+        background-image: url(images/x.png);
+    }
+    #main .answer{
+        background-color: white;
+    }
+</style>
+    <div id ="main">
+<h1>Jednostronnicowa lista FAQ</h1>
+<h2>Słyszałem, że JavaScript to fontanna młodości. Czy to prawda?</h2>
+<div class = "answer">
+<p> tak to prawda</p>
+</div>
+<h2>Czy JS rzeczywiście rozwiąze wszytkie moje problemy ?</h2>
+<div class="answer">
+<p> nie wszytie ale tak</p>
+</div>
+<h2>Czy to prawda że JS potrafi sam pisać</h2>
+<div class="answer">
+<p>nie!</p>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/JavaScript">
+    $(function($) {
+        $('.answer').hide();
+        $('#main h2').click(function(){
+            $(this).next('.answer').fadeToggle();
+            $(this).toggleClass('close');
+        });
+    });
+
+
+</script>
+
+</body>
+</html>
