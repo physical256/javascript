@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Odczytywanie elementu  (adresu linku) funkcje getAttribute()</h1>
+
+<a herf="https://www.w3schools.com">Link</a>
+<a herf="https://zsgsucha.pl">ZS Goetel</a>
+
+<script>
+    let lista=document.querySelectorAll('a');
+    console.log(lista);
+    console.log('Pierwszy:'+lista[0].getAttribute('herf'));
+    console.log('Drugi:'+lista[0].getAttribute('herf'));
+
+</script>
+</body>
+</html>
